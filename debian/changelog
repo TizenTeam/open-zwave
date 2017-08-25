@@ -1,3 +1,9 @@
+openzwave (1.4.79.gfaea7ddubuntu1) UNRELEASED; urgency=medium
+
+  * WIP
+
+ -- Philippe Coval <philippe.coval@osg.samsung.com>  Fri, 25 Aug 2017 12:51:02 +0200
+
 openzwave (1.4.79.gfaea7dd) unstable; urgency=low
 
   * Update to a 1.4.x snapshot.
