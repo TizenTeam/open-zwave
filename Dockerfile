@@ -34,7 +34,7 @@ RUN echo "#log: Configuring locales" \
   && dpkg-reconfigure locales \
   && sync
 
-ENV project iotjs
+ENV project openzwave
 
 RUN echo "#log: ${project}: Setup system" \
   && set -x \
@@ -54,13 +54,14 @@ ADD . /usr/local/src/${project}/${project}/
 WORKDIR /usr/local/src/${project}/${project}/
 RUN echo "#log: ${project}: Preparing sources" \
   && set -x \
-  && ./debian/rules rule/dist \
+  && make dist \
+  && ./debian/rules binary\
   && sync
 
 RUN echo "#log: ${project}: Building sources" \
   && set -x \
   && ./debian/rules \
-  && sudo debi \
+  && sudo dpkg -i /usr/local/src/${project}/*.deb \
   && ls -la /usr/local/src/${project}/*.* \
   && dpkg -L ${project} \
   && sync
