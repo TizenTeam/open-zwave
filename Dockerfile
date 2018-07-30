@@ -68,7 +68,7 @@ RUN echo "#log: ${project}: Preparing sources" \
 
 RUN echo "#log: ${project}: Building sources" \
   && set -x \
-  && ./debian/rules \
+  && find \
   && sudo dpkg -i /usr/local/src/${project}/*.deb \
   && ls -la /usr/local/src/${project}/*.* \
   && dpkg -L ${project} \
