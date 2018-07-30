@@ -40,6 +40,7 @@ RUN echo "#log: ${project}: Setup system" \
   && set -x \
   && apt-get update -y \
   && apt-get install -y \
+  build-essential \
   fakeroot \
   make \
   sudo \
@@ -47,6 +48,13 @@ RUN echo "#log: ${project}: Setup system" \
   debhelper \
 \
   gawk \
+\
+  quilt \
+  libudev-dev \
+  libxml2-utils \
+  gcc\
+  g++ \
+  dh-exec \
   && apt-get clean \
   && sync
 
