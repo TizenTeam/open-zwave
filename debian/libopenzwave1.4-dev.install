@@ -1,5 +1,4 @@
 usr/lib/*/libopenzwave.so
 usr/include/openzwave/*
 cpp/tinyxml/*.h usr/include/openzwave/tinyxml
-usr/lib*/*/pkgconfig/libopenzwave.pc
-
+usr/lib*/pkgconfig/libopenzwave.pc
